@@ -67,27 +67,31 @@ title: Getting Started with Crails Framework
   </tr>
   <tr>
     <td>app/</td>
-    <td>Contains the controllers, models, views, helpers, mailers and assets for your application.</td>
-  </tr>
-  <tr>
-    <td>app/main.cpp</td>
-    <td>This file contains the entry point for the server binary.</td>
+    <td>Contains the controllers, models, views, helpers, mailers, etc. for your application.<br/>The content of this folder will be built as a library that other targets (server, tests) will link to.</td>
   </tr>
   <tr>
     <td>app/routes.cpp</td>
     <td>This is where you'll bind your routes with your controller methods.</td>
   </tr>
   <tr>
-    <td>build/</td>
-    <td>Output for your application binaires: server, tasks, anything from your application that can be executed will end up in this folder.</td>
-  </tr>
-  <tr>
-    <td>config/</td>
+    <td>app/config/</td>
     <td>Configure your application's server, database, <a href="/request_pipeline">request pipeline</a> and several optional features of Crails.</td>
   </tr>
   <tr>
-    <td>lib/</td>
-    <td>This folder is used for application code that you haven't written yourself. Crails uses several code generating utilities: the <code>lib</code> folder is where this code will be generated and compiled from</td>
+    <td>app/autogen/</td>
+    <td>This folder is used for application code that you haven't written yourself. Crails uses several code generating utilities: the <code>autogen</code> folder is where this code will be generated and compiled from</td>
+  </tr>
+  <tr>
+    <td>assets/</td>
+    <td>Contains static assets that will be served by your application (images, javascript, stylesheets).</td>
+  </tr>
+  <tr>
+    <td>exe/<td>
+    <td>Contains the executable targets, most notably your <b>server</b>, and potential punctual task runners or tools you may build around your application</td>.
+  </tr>
+  <tr>
+    <td>exe/server/main.cpp</td>
+    <td>This file contains the entry point for the server binary.</td>
   </tr>
   <tr>
     <td>public/</td>
@@ -96,6 +100,10 @@ title: Getting Started with Crails Framework
   <tr>
     <td>spec/</td>
     <td>This is where you'll write tests for your application.</td>
+  </tr>
+  <tr>
+    <td>spec/driver/</td>
+    <td>A default test driver using Crails' custom testing tools.</td>
   </tr>
   <tr>
     <td>CMakeLists.txt</td>

@@ -64,7 +64,7 @@ CPP
 </p>
 
 <%= code_block <<CPP
-void hello_world(Crails::Request& request, std::function<void()> callback)
+void hello_world(Crails::Context& request, std::function<void()> callback)
 {
   request.response.set_headers("Content-Type", "text/plain");
   request.response.set_response(

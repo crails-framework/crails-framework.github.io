@@ -338,6 +338,8 @@ REDIS_URL="redis://localhost:5379"</pre>
   your servers.
 </p>
 
+<div class="hint-box">If <b>SELinux</b> is enabled on your system, you might need to temporarily disable it while working with docker machines. Use <code>sudo setenforce 0</code> to temporarily disable SELinux.</div>
+
 <h3>4.1 Machine creation</h3>
 <p>
   Speaking of which, now that the docker plugin is installed, you can scaffold new docker machine configurations

@@ -131,7 +131,7 @@ CPP
 #include <crails/signin/session_controller.hpp>
 #include "application.hpp" // ApplicationController
 #include "app/models/user.hpp" // our model
-#include "lib/odb/application-odb.hxx" // query implementations
+#include "app/autogen/odb/application-odb.hpp" // query implementations
 
 class SessionController :
   public Crails::SessionController<User, ApplicationController>
